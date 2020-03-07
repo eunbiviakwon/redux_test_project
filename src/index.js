@@ -12,11 +12,11 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-console.log(store.getState());
+//console.log(store.getState());
 // 액션, 스토어안에 들어갈 상태값, 그 상태값을 어떻게 변화시킬지에대한 리듀서
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById("root")
